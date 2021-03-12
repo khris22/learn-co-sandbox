@@ -1,0 +1,35 @@
+# Object Attributes
+# add the special method initialize
+
+class Person 
+  def initialize(name)
+    @name = name      #getter or reader method #returns info stored in an instance variable
+  end
+  
+  def name=(new_name) #setter method #followed by the (argument_name)
+    @name = new_name 
+  end
+end
+
+kanye = Person.new("Kanye")
+kanye.name
+
+# Calling a Setter method
+
+kanye = Person.new("Kanye")
+
+kanye.name
+
+kanye.name = "Yeezy" 
+# or kanye.name=("Yeezy")
+# or kanye.instance_variable_set(:@name, "Yeezy")
+kanye.name
+
+#retrieve:
+#kanye.instance_variable_get(:@name)
+
+
+#Instantiate a Person instance and name him "Kanye".
+#Call our getter method, #name to return his name, "Kanye"
+#Call our setter method #name= to change his name to "Yeezy"
+#Call our getter method again and see that kanye's name is now "Yeezy".
